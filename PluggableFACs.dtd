@@ -1,0 +1,41 @@
+<!--
+* Name (string) - A unique name that will provide a reference to the new FAC.
+* Display Name (string) - A name used to display on user interfaces. UTF-8 input is expected.
+* Disable (boolean) - Allow the FAC to be disabled. Default to true if not provided.
+* NoSecurity (boolean) - Allow the FAC to have no security. Default to true if not provided.
+* AllowProtection (boolean) - Allow the FAC to have templates applied.
+* AtDevice (boolean) - Allow the FAC to use local only authentication methods (such as CAC.)
+* CanUseNet (boolean) - Allow the FAC to use templates that require network access (such as Kerberos.)
+* mfpOnly(boolean) - If true then this FAC is only valid for MFPs and not SFPs.
+* colorOnly - If true then this FAC is only valid on printers that do color.
+* ESFRequired - Always set to true  If true then this FAC is only valid if the printer has ESF.
+adminUserType - If you go through the Auth Wizard on the web, at the end
+you have the option to apply a security template to all "user" (2) or all
+"admin" (1) FACs.
+  So you can just tag the FAC as being a "user" or "admin" FAC soley for
+the wizard purpose.
+
+-->
+<!ELEMENT pluggableFACs (element)*>
+
+<!ELEMENT element (name, displayResourceId, translations*)>
+<!ATTLIST element
+   allowDisable (true|false) #REQUIRED
+   allowNoSecurity (true|false) #REQUIRED
+   allowTemplates (true|false) #REQUIRED
+   useOnlyLocalAuthn (true|false) #REQUIRED
+   allowNetworkAccess (true|false) #REQUIRED
+   mfpOnly (true|false) #REQUIRED
+   colorOnly (true|false) #REQUIRED
+   etaskOnly (true|false) #REQUIRED
+   >
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT displayResourceId (#PCDATA)>
+
+<!ELEMENT translations (#PCDATA)>
+<!ATTLIST translations
+   locale CDATA #REQUIRED
+   >
+
+

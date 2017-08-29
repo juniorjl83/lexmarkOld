@@ -1,0 +1,25 @@
+<!-- Example of some common setting formations. -->
+<!DOCTYPE settings PUBLIC "-//LES//Settings//EN" "file:./Settings.dtd">
+<settings>
+   <global>
+      <element name="settings.promptDominio" type="String">
+         <description value="settings.promptDominio.description" />
+         <length max="500" />
+      </element>
+      
+      <element name="settings.promptUser" type="String">
+         <description value="settings.promptUser.description" />
+         <length max="500" />
+      </element>
+      
+      <element name="settings.promptPassword" type="String" subtype="Password">
+         <description value="settings.promptPassword.description" />
+         <length max="500" />
+      </element>
+      
+      <element name="settings.promptPath" type="String">
+         <description value="settings.promptPath.description" />
+         <length max="50000" />
+      </element>
+   </global>
+</settings>

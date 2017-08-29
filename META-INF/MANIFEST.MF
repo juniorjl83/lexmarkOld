@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.5
+Created-By: 1.4.2_12-b03 (Sun Microsystems Inc.)
+Bundle-Name: authservice
+Bundle-SymbolicName: authservice
+Bundle-Version: 3.1.0
+Bundle-Description: Auth Service
+Bundle-Activator: com.lexmark.prtapp.authserviceimpl.Activator
+Bundle-Classpath: .
+Export-Package: com.lexmark.prtapp.authservice;specification-version=3
+ .1.0
+Import-Package: com.lexmark.core,com.lexmark.corecommunications,com.le
+ xmark.prtapp.sessions,com.lexmark.prtapp.util,javax.xml.parsers,org.o
+ sgi.framework,org.ungoverned.gravity.servicebinder,org.xml.sax,org.xm
+ l.sax.helpers
+Build-Date: Mon December 27 2010, 14:33:53
+Metadata-Location: Metadata.xml
+Application: false
+Application-HasCustomConfiguration: false
+Application-Dependencies: 
+Bundle-UseMemoryManager: false
+Bundle-BaseResource: Resources
+LES-Version: 3.1.0
+LES-BuildVersion: ESS.31.052,27-Dec-10 14:31,mls-bld,ESS.31.052/esfsdk,
+Bundle-UnstoppableIfBuiltIn: true
+Bundle-Hash-v1: 1085348016
+

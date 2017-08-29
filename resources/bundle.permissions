@@ -1,0 +1,38 @@
+// Permissions for the fabricacredito bundle
+
+// It uses the same syntax as the standard java policy but you only specify
+// the permission statements.  Here is the syntax:
+//
+// permission <type_name>[[ "target_name"], "actions"];
+//
+// where:
+//    []             optional
+//    <type_name>    the name of the permission class
+//    <target_name>  the target name for the specified permission
+//    <actions>      the actions for the specified permission
+
+// For setting default locale
+//permission java.util.PropertyPermission "user.language", "write";
+
+permission org.osgi.framework.ServicePermission "com.lexmark.prtapp.profile.PrtappProfile", "register";
+permission org.osgi.framework.ServicePermission "org.osgi.service.cm.ManagedService", "register";
+permission org.osgi.framework.ServicePermission "com.lexmark.prtapp.settings.SettingsAdmin", "get";
+
+
+// permission java.net.SocketPermission "localhost:7777", "listen";
+
+//para smb
+
+//permission org.osgi.framework.ServicePermission "com.lexmark.prtapp.smbclient.SmbClientService", "get";
+permission org.osgi.framework.ServicePermission "com.lexmark.prtapp.newcharacteristics.DeviceCharacteristicsService", "get";
+
+
+// reason Scanning to SMB file shares requires network access
+permission java.net.SocketPermission "*", "connect,resolve";
+
+
+
+
+
+
+

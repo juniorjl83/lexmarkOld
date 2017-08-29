@@ -1,0 +1,1 @@
+ smb://SRVAPPANBASE01;digitalizacion.fina:Tinamerica2014@192.168.0.59//Imagenes_Onbase/1030-Pasivo/1030-102515/102515-1030-192.168.5.138-11.logfin
